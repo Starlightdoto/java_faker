@@ -22,13 +22,18 @@ public class FormTest {
     }
 
     @Test
-    void fillForm() {
+    void successfulRegTest() {
         open("/automation-practice-form");
+        $(".practice-form-wrapper").shouldHave(text("Student Registration Form"));
+
         $("#firstName").setValue("Almas");
         $("#lastName").setValue("Tester");
         $("#userEmail").setValue("test@test.com");
+        $("#currentAddress").setValue("Test address 123");
+
         $("#userNumber").setValue("88005553535");
         $("#dateOfBirthInput").click();
+        $(".react-datepicker__day react-datepicker__day--015").click();
     }
 
 
