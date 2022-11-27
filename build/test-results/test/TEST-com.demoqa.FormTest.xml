@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.demoqa.FormTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-11-26T11:23:53" hostname="Almass-MacBook.local" time="22.589">
+<testsuite name="com.demoqa.FormTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-11-27T14:00:53" hostname="Almass-MacBook.local" time="39.014">
   <properties/>
-  <testcase name="successfulRegTest()" classname="com.demoqa.FormTest" time="22.589"/>
+  <testcase name="successfulRegTest()" classname="com.demoqa.FormTest" time="39.014"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[SLF4J: No SLF4J providers were found.
 SLF4J: Defaulting to no-operation (NOP) logger implementation
 SLF4J: See http://www.slf4j.org/codes.html#noProviders for further details.
-Starting ChromeDriver 107.0.5304.62 (1eec40d3a5764881c92085aaee66d25075c159aa-refs/branch-heads/5304@{#942}) on port 60337
+Starting ChromeDriver 107.0.5304.62 (1eec40d3a5764881c92085aaee66d25075c159aa-refs/branch-heads/5304@{#942}) on port 62937
 Only local connections are allowed.
 Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
 ChromeDriver was started successfully.
-Nov 26, 2022 5:24:02 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+Nov 27, 2022 8:01:03 PM org.openqa.selenium.remote.ProtocolHandshake createSession
 INFO: Detected upstream dialect: W3C
-Nov 26, 2022 5:24:02 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+Nov 27, 2022 8:01:03 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 107, so returning the closest version found: 104
-Nov 26, 2022 5:24:02 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+Nov 27, 2022 8:01:03 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 INFO: Found CDP implementation for version 107 of 104
 ]]></system-err>
 </testsuite>
