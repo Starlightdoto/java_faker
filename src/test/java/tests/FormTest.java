@@ -1,26 +1,34 @@
 package tests;
+import com.github.javafaker.Faker;
 import org.junit.jupiter.api.Test;
+import pages.components.CalendarComponent;
+import tests.random_data.RandomUtil;
+
+import java.util.Random;
+import java.util.concurrent.ThreadLocalRandom;
 
 public class FormTest extends TestBase{
-
+RandomUtil rndU = new RandomUtil();
 
     @Test
     void successfulRegTest() {
-        String firstName = "Almas";
-        String lastName = "Tester";
-        String email = "test@test.com";
-        String address = "Test address 322";
-        String userNumber = "8800555353";
-        String gender = "Male";
-        String dayDOB = "27";
-        String monthDOB = "July";
-        String yearDOB = "1998";
-        String subject = "Maths";
-        String imgPath = "img/test.png";
-        String imgName = "test.png";
-        String state = "NCR";
+        Faker faker = new Faker();
+        String firstName = faker.name().firstName();
+        String lastName = faker.name().lastName();
+        String email = faker.internet().emailAddress();
+        String address = faker.animal().name();
+        String userNumber = faker.phoneNumber().subscriberNumber(10);
+        String gender = faker.demographic().sex();
+        Integer dayDOB = faker.number().numberBetween(1, 28);
+        String monthDOB = rndU.pickDate();
+        Integer yearDOB = faker.number().numberBetween(1990, 2005);
+        String subject = rndU.pickSubj();
+        String imgPath = "img/test.png"; // не вижу смысла искать способ рандомную картинку подгружать
+        String imgName = "test.png"; // то же самое что и пункт выше
+        String state = "NCR"; // тут и следующая строка - взаимосвязаны,
+                                // и если рандомно будет выбран штат - не угадаешь какой нужен город, проще оставить хардкод
         String city = "Delhi";
-        String hobbie = "Sports";
+        String hobbie = rndU.pickHobbie();
 
 
         regPage.openPage()
@@ -30,7 +38,7 @@ public class FormTest extends TestBase{
                 .setNumber(userNumber)
                 .setAddress(address)
                 .setGender(gender)
-                .setBirthDate(dayDOB, monthDOB, yearDOB)
+                .setBirthDate(dayDOB.toString(), monthDOB, yearDOB.toString())
                 .setSubjects(subject)
                 .setHobbie(hobbie)
                 .setPicture(imgPath)

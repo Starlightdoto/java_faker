@@ -1,5 +1,7 @@
 package pages.components;
 
+import java.util.Random;
+
 import static com.codeborne.selenide.Selenide.$;
 
 public class CalendarComponent {
@@ -8,4 +10,6 @@ public class CalendarComponent {
         $(".react-datepicker__year-select").selectOptionByValue(year);
         $(".react-datepicker__day--0" + day + "").click();
     }
+
+
 }
